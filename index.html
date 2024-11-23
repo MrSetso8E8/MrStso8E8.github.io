@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interactiva con Evidencias</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 45%;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section h3 {
+            margin-top: 0;
+        }
+        .pdf-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+        .pdf-button:hover {
+            background-color: #45a049;
+        }
+        .pdf-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a la Página de Evidencias de <br>Jose Alejandro Licon Antonio</h1>
+</header>
+
+<nav>
+    <a href="#evidencia1">Evidencia 1</a>
+    <a href="#evidencia2">Evidencia 2</a>
+    <a href="#evidencia3">Evidencia 3</a>
+    <a href="#evidencia4">Evidencia 4</a>
+</nav>
+
+<div class="container">
+    <div id="evidencia1" class="section">
+        <h3>Evidencia 1</h3>
+        <button class="pdf-button" onclick="mostrarPDF('pdf1')">Ver PDF</button>
+        <div id="pdf1" class="pdf-container">
+            <iframe src="INT1_BDPWD (1)_compressed.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div id="evidencia2" class="section">
+        <h3>Evidencia 2</h3>
+        <button class="pdf-button" onclick="mostrarPDF('pdf2')">Ver PDF</button>
+        <div id="pdf2" class="pdf-container">
+            <iframe src="EV_2DPWD_compressed.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div id="evidencia3" class="section">
+        <h3>Evidencia 3</h3>
+        <button class="pdf-button" onclick="mostrarPDF('pdf3')">Ver PDF</button>
+        <div id="pdf3" class="pdf-container">
+            <iframe src="BDPWD_EV3_compressed.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div id="evidencia4" class="section">
+        <h3>Evidencia 4</h3>
+        <button class="pdf-button" onclick="mostrarPDF('pdf4')">Ver PDF</button>
+        <div id="pdf4" class="pdf-container">
+            <iframe src="EV4_LAJA_compressed.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarPDF(id) {
+        var pdfContainer = document.getElementById(id);
+        if (pdfContainer.style.display === "none" || pdfContainer.style.display === "") {
+            pdfContainer.style.display = "block";
+        } else {
+            pdfContainer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
